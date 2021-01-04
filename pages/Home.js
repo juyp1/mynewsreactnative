@@ -12,6 +12,16 @@ class HomePage extends  Component {
             fontWeight:"bold"
         }
     }
+    state={
+        ishow:true
+    }
+    componentDidMount() {
+        console.log('页面渲染')
+    }
+    componentWillUnmount() {
+        console.log('页面卸载')
+    }
+    
     render(){
         return(
             <View style={{flex:1,
@@ -23,6 +33,7 @@ class HomePage extends  Component {
                 <Button title="跳转" onPress={()=>{
                     this.props.navigation.navigate('detail')
                 }}></Button>
+                
             </View>
         )
     }
