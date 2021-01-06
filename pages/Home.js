@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
-import {View,Text,Button,StyleSheet} from  'react-native'
+import {View,Text,Button,SafeAreaView,Image} from  'react-native'
 import Panle from '../component/Panle';
+import {pxToDp} from '../utils/index'
 class HomePage extends  Component {
     static navigationOptions={
         title:'首页',
@@ -26,19 +27,27 @@ class HomePage extends  Component {
     render(){
         console.log(this)
         return(
-           
-            <View style={{flex:1,
-                display:"flex",
-                
-                justifyContent:"center",
-                alignItems:'center'}}>
-                <Text>我是Home</Text>
-                <Panle/>
-                <Button title="跳转" onPress={()=>{
-                    this.props.navigation.navigate('detail')
-                }}></Button>
-                
-            </View>
+            
+            <SafeAreaView>
+               <View>
+                   <Image source={require('../assets/img/product.png')} style={{
+    
+                       width:pxToDp(165),height:pxToDp(165)
+                   }}/>
+               </View>
+            </SafeAreaView>
+            // <View style={{flex:1,
+            //     display:"flex",
+            //
+            //     justifyContent:"center",
+            //     alignItems:'center'}}>
+            //     <Text>我是Home</Text>
+            //     <Panle/>
+            //     <Button title="跳转" onPress={()=>{
+            //         this.props.navigation.navigate('detail')
+            //     }}></Button>
+            //
+            // </View>
         )
     }
 }

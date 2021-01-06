@@ -18,11 +18,11 @@ import {
  // import BaseNav  from './component/BaseNav';
 import MainTabNavigator from './navigator/MainTabNavgator';
 import {Provider} from 'mobx-react';
-import RootStore from './mobx';
+import store from './mobx';
 
 const App: () => React$Node = () => {
   return (
-      <Provider RootStore={RootStore}>
+      <Provider store={store}>
    
         <MainTabNavigator/>
   </Provider>

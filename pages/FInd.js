@@ -1,5 +1,8 @@
 import React,{Component} from 'react'
 import {View,Text,StyleSheet} from  'react-native'
+import {inject,observer} from 'mobx-react'
+@inject("store")
+@observer
 class FindPage extends  Component {
     render(){
         return(
@@ -9,6 +12,7 @@ class FindPage extends  Component {
                 justifyContent:"center",
                 alignItems:'center'}}>
                 <Text>我是发现</Text>
+                <Text>{this.props.store.car.carname}</Text>
             </View>
         )
     }

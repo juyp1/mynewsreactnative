@@ -1,10 +1,4 @@
-import {observable,action} from 'mobx'
-class  RootStore {
-    @observable
-    name="悟空";
-    @action
-    changeName(name){
-        this.name=name;
-    }
-}
-export default  new RootStore()
+import car from './car'
+import home from './home'
+const store = { car, home }
+export default store
