@@ -1,4 +1,4 @@
-class  RootStore {
-    name="悟空";
-    
-}
+import car from './car'
+import home from './home'
+const store = { car, home }
+export default store

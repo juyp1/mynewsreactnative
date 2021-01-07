@@ -17,9 +17,16 @@ import {
 } from 'react-native';
  // import BaseNav  from './component/BaseNav';
 import MainTabNavigator from './navigator/MainTabNavgator';
+import {Provider} from 'mobx-react';
+import store from './mobx';
+
 const App: () => React$Node = () => {
   return (
-      <MainTabNavigator/>
+      <Provider store={store}>
+   
+        <MainTabNavigator/>
+  </Provider>
+  
   )
 };
 
