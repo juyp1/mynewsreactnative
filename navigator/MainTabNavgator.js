@@ -7,10 +7,12 @@ import HomeRootStack from './HomeStackNavigator';
 import MyRootStack from './MyStackNavigator';
 import FindPage from '../pages/FInd';
 import NeabyPage from '../pages/Neaby';
-// import MyPage from '../pages/My';
+
+
+
 
 const tabs = {
-  
+
     home: {
         screen: HomeRootStack,
         navigationOptions: {
@@ -39,7 +41,7 @@ const tabs = {
             },
         },
     },
-    
+
     nearby: {
         screen: NeabyPage,
         navigationOptions: {
@@ -71,11 +73,11 @@ const tabs = {
 };
 //const TabBarComponent = (props) => <BottomTabBar {...props} activeTintColor="red" />;
 class MainTabNavigator extends  Component {
-  
+
     _tabNavigator(){
     const {home,find,nearby,my} = tabs
     const _tabs={
-     
+
         home,
         find,
         nearby,
